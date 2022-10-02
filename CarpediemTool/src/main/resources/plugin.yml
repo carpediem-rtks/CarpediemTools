@@ -1,0 +1,4 @@
+name: carpediemtool
+version: 0.0.1
+main: tools.Main
+api-version: 1.19
