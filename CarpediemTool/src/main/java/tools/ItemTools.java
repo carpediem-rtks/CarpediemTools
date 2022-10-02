@@ -3,10 +3,11 @@ package tools;
 import java.util.List;
 
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class Items {
+public class ItemTools {
 
 	public static ItemStack createItem(String name,Material material) {
 		return createItem(name,material,null);
@@ -20,5 +21,9 @@ public class Items {
 		}
 		item.setItemMeta(itemm);
 		return item;
+	}
+	
+	public static boolean hasItemNotNull(Player player) {
+		return (player.getInventory().getItemInMainHand() != null && player.getInventory().getItemInMainHand().getType() != Material.AIR);
 	}
 }
